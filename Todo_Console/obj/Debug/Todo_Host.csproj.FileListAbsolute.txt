@@ -10,3 +10,15 @@ C:\temp\KODAPA\Uppgift 4.4 MAIN\Clone_Of_Master\Todo_G10_1.0\Todo_Console\bin\De
 C:\temp\KODAPA\Uppgift 4.4 MAIN\Clone_Of_Master\Todo_G10_1.0\Todo_Console\obj\Debug\Todo_Host.csprojResolveAssemblyReference.cache
 C:\temp\KODAPA\Uppgift 4.4 MAIN\Clone_Of_Master\Todo_G10_1.0\Todo_Console\obj\Debug\Todo_Host.exe
 C:\temp\KODAPA\Uppgift 4.4 MAIN\Clone_Of_Master\Todo_G10_1.0\Todo_Console\obj\Debug\Todo_Host.pdb
+\\Mac\Home\Documents\Git_DanKam\G10_WCF\Todo_Console\bin\Debug\Todo_Host.exe.config
+\\Mac\Home\Documents\Git_DanKam\G10_WCF\Todo_Console\obj\Debug\Todo_Host.exe
+\\Mac\Home\Documents\Git_DanKam\G10_WCF\Todo_Console\obj\Debug\Todo_Host.pdb
+\\Mac\Home\Documents\Git_DanKam\G10_WCF\Todo_Console\bin\Debug\Todo_Host.exe
+\\Mac\Home\Documents\Git_DanKam\G10_WCF\Todo_Console\bin\Debug\Todo_Host.pdb
+\\Mac\Home\Documents\Git_DanKam\G10_WCF\Todo_Console\bin\Debug\Todo_Class.dll
+\\Mac\Home\Documents\Git_DanKam\G10_WCF\Todo_Console\bin\Debug\Todo_DB.dll
+\\Mac\Home\Documents\Git_DanKam\G10_WCF\Todo_Console\bin\Debug\Todo_WebService.dll
+\\Mac\Home\Documents\Git_DanKam\G10_WCF\Todo_Console\bin\Debug\Todo_Class.pdb
+\\Mac\Home\Documents\Git_DanKam\G10_WCF\Todo_Console\bin\Debug\Todo_DB.pdb
+\\Mac\Home\Documents\Git_DanKam\G10_WCF\Todo_Console\bin\Debug\Todo_WebService.pdb
+\\Mac\Home\Documents\Git_DanKam\G10_WCF\Todo_Console\obj\Debug\Todo_Host.csprojResolveAssemblyReference.cache

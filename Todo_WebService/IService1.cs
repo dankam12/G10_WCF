@@ -39,7 +39,7 @@ namespace Todo_WebService
 
 
         [OperationContract]
-        [WebInvoke(Method = "POST", UriTemplate = "/UpDateToDO", RequestFormat = WebMessageFormat.Json)]
+        [WebInvoke(Method = "PUT", UriTemplate = "/UpDateToDO", RequestFormat = WebMessageFormat.Json)]
         void UpdateTodo(ToDo todo);
 
 

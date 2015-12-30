@@ -18,7 +18,7 @@ namespace Todo_WebService
     
     public class Service1 : IService1
     {
-        private DAL d = new DAL (@"Data Source=localhost\sqlexpress;Initial Catalog=DB_ToDoList;User ID=RestFullUser1;Password=RestFull123");
+        private DAL d = new DAL (@"Data Source=localhost\sqlexpress;Initial Catalog=DB_ToDoList;User ID=RestFullUser;Password=RestFull123");
 
         public void AddTodo(ToDo todo)
         {

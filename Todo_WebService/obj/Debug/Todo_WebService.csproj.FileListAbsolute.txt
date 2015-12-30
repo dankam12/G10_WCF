@@ -8,3 +8,13 @@ C:\temp\KODAPA\Uppgift 4.4 MAIN\Clone_Of_Master\Todo_G10_1.0\Todo_WebService\bin
 C:\temp\KODAPA\Uppgift 4.4 MAIN\Clone_Of_Master\Todo_G10_1.0\Todo_WebService\obj\Debug\Todo_WebService.csprojResolveAssemblyReference.cache
 C:\temp\KODAPA\Uppgift 4.4 MAIN\Clone_Of_Master\Todo_G10_1.0\Todo_WebService\obj\Debug\Todo_WebService.dll
 C:\temp\KODAPA\Uppgift 4.4 MAIN\Clone_Of_Master\Todo_G10_1.0\Todo_WebService\obj\Debug\Todo_WebService.pdb
+\\Mac\Home\Documents\Git_DanKam\G10_WCF\Todo_WebService\bin\Todo_WebService.dll.config
+\\Mac\Home\Documents\Git_DanKam\G10_WCF\Todo_WebService\bin\Todo_WebService.dll
+\\Mac\Home\Documents\Git_DanKam\G10_WCF\Todo_WebService\bin\Todo_WebService.pdb
+\\Mac\Home\Documents\Git_DanKam\G10_WCF\Todo_WebService\bin\Todo_Class.dll
+\\Mac\Home\Documents\Git_DanKam\G10_WCF\Todo_WebService\bin\Todo_DB.dll
+\\Mac\Home\Documents\Git_DanKam\G10_WCF\Todo_WebService\bin\Todo_Class.pdb
+\\Mac\Home\Documents\Git_DanKam\G10_WCF\Todo_WebService\bin\Todo_DB.pdb
+\\Mac\Home\Documents\Git_DanKam\G10_WCF\Todo_WebService\obj\Debug\Todo_WebService.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\Git_DanKam\G10_WCF\Todo_WebService\obj\Debug\Todo_WebService.dll
+\\Mac\Home\Documents\Git_DanKam\G10_WCF\Todo_WebService\obj\Debug\Todo_WebService.pdb

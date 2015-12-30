@@ -1,0 +1,12 @@
+C:\temp\KODAPA\Uppgift 4.4 MAIN\Clone_Of_Master\Todo_G10_1.0\Todo_Console\bin\Debug\Todo_Host.exe.config
+C:\temp\KODAPA\Uppgift 4.4 MAIN\Clone_Of_Master\Todo_G10_1.0\Todo_Console\bin\Debug\Todo_Host.exe
+C:\temp\KODAPA\Uppgift 4.4 MAIN\Clone_Of_Master\Todo_G10_1.0\Todo_Console\bin\Debug\Todo_Host.pdb
+C:\temp\KODAPA\Uppgift 4.4 MAIN\Clone_Of_Master\Todo_G10_1.0\Todo_Console\bin\Debug\Todo_Class.dll
+C:\temp\KODAPA\Uppgift 4.4 MAIN\Clone_Of_Master\Todo_G10_1.0\Todo_Console\bin\Debug\Todo_DB.dll
+C:\temp\KODAPA\Uppgift 4.4 MAIN\Clone_Of_Master\Todo_G10_1.0\Todo_Console\bin\Debug\Todo_WebService.dll
+C:\temp\KODAPA\Uppgift 4.4 MAIN\Clone_Of_Master\Todo_G10_1.0\Todo_Console\bin\Debug\Todo_Class.pdb
+C:\temp\KODAPA\Uppgift 4.4 MAIN\Clone_Of_Master\Todo_G10_1.0\Todo_Console\bin\Debug\Todo_DB.pdb
+C:\temp\KODAPA\Uppgift 4.4 MAIN\Clone_Of_Master\Todo_G10_1.0\Todo_Console\bin\Debug\Todo_WebService.pdb
+C:\temp\KODAPA\Uppgift 4.4 MAIN\Clone_Of_Master\Todo_G10_1.0\Todo_Console\obj\Debug\Todo_Host.csprojResolveAssemblyReference.cache
+C:\temp\KODAPA\Uppgift 4.4 MAIN\Clone_Of_Master\Todo_G10_1.0\Todo_Console\obj\Debug\Todo_Host.exe
+C:\temp\KODAPA\Uppgift 4.4 MAIN\Clone_Of_Master\Todo_G10_1.0\Todo_Console\obj\Debug\Todo_Host.pdb

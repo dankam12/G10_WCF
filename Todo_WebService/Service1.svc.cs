@@ -66,17 +66,17 @@ namespace Todo_WebService
         public void DelTodo(string id)
         {
             int ID;
-
             int.TryParse(id, out ID);
             if (ID >= 0)
             { d.DeleteToDo(ID); }
-            else ID = -1;
-
-
-         
-            
+            else ID = -1;            
         }
 
+        public void AddTodoList(List<ToDo> todolist)
+        {
+            foreach (ToDo x in todolist)
+                d.AddToDo(x);               
+        }
     }
     // till kolla om ! på slutet  if("köpaöl!".substring(("köpaöl!".length -1))== !) fixa whitespaces samt trim... 
 }

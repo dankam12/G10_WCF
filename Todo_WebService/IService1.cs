@@ -23,9 +23,9 @@ namespace Todo_WebService
         // Implementerar krav 2. Skapa todo-lista
         // Implementerar krav 3. Lägga till punkter
         [OperationContract]
-        [WebInvoke(Method = "POST", UriTemplate = "/AddToDo", RequestFormat = WebMessageFormat.Json)]
+        [WebInvoke(Method = "POST", UriTemplate = "/AddToDo", ResponseFormat = WebMessageFormat.Json, RequestFormat = WebMessageFormat.Json)]
         [Description("Implementerar Krav nr. 2 (Skapa todo-lista) samt Krav nr. 3 (Lägga till punkter)")]
-        void AddTodo(ToDo todo);
+        string AddTodo(ToDo todo);
 
         // Implementerar krav 4. Ta bort punkter
         [OperationContract]
@@ -53,9 +53,9 @@ namespace Todo_WebService
 
         // Implementerar krav 7. Skriva in flera punkter samtidigt
         [OperationContract]
-        [WebInvoke(Method = "POST", UriTemplate = "/AddToDoList", RequestFormat = WebMessageFormat.Json)]
+        [WebInvoke(Method = "POST", UriTemplate = "/AddToDoList", ResponseFormat = WebMessageFormat.Json, RequestFormat = WebMessageFormat.Json)]
         [Description("Implementerar Krav nr. 7 (Skriva in flera punkter samtidigt)")]
-        void AddTodoList(List<ToDo> todo);
+        string AddTodoList(List<ToDo> todo);
 
         // Implementerar krav 8. Redigera punkter
         [OperationContract]

@@ -25,12 +25,15 @@ namespace Todo_WebService
             return d.GetToDoListByName(name);
         }
 
-        public void AddTodo(ToDo todo)
+        public string AddTodo(ToDo todo)
         {
             if (todo.Name.Length >= 6)
             {
                 d.AddToDo(todo);
+                return "ToDo added to DB";
             }
+            else
+                return "Name too short";
         }
 
         public void DelTodo(string id)
@@ -93,15 +96,28 @@ namespace Todo_WebService
             d.UpdateToDo(todo);
         }
 
-        public void AddTodoList(List<ToDo> todolist)
+        public string AddTodoList(List<ToDo> todolist)
         {
+            bool listok = true;
+
             foreach (ToDo todo in todolist)
             {
-                if (todo.Name.Length >= 6)
+                if (todo.Name.Length < 6)
+                {
+                    listok = false;
+                    return "List contains items with invalid names";
+                }
+
+            }
+
+            if (listok)
+            {
+                foreach (ToDo todo in todolist)
                 {
                     d.AddToDo(todo);
                 }
             }
+            return "List added to DB";
         }
 
         public String GetErrorMessage()

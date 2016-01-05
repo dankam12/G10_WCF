@@ -63,6 +63,7 @@ namespace Todo_DB
             {
                 ErrorMessage = ex.Message;
             }
+
         }
         /// <summary>
         /// UpdateToDo
@@ -100,6 +101,7 @@ namespace Todo_DB
             {
                ErrorMessage = ex.Message;
             }
+
         }
         /// <summary>
         /// DeleteToDo
@@ -130,6 +132,7 @@ namespace Todo_DB
             {
                 ErrorMessage = ex.Message;
             }
+
         }
 
         /// <summary>
@@ -235,7 +238,7 @@ namespace Todo_DB
 
                     conn = new SqlConnection(connString);
 
-                    string sqlSelectString = "select * from ToDoList where Name like '%" + name + "%'";
+                    string sqlSelectString = "select * from ToDoList where Name = '" + name + "'";
                     command = new SqlCommand(sqlSelectString, conn);
                     command.Connection.Open();
 

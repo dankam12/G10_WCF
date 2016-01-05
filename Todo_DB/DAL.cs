@@ -62,6 +62,7 @@ namespace Todo_DB
             catch (Exception ex)
             {
                 ErrorMessage = ex.Message;
+                Console.WriteLine(ErrorMessage);
             }
 
         }

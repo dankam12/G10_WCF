@@ -19,14 +19,15 @@ namespace Todo_Console
             WebServiceHost Host = new WebServiceHost(typeof(Service1), new Uri("Localhost:8000/"));
 
             ServiceEndpoint ep = Host.AddServiceEndpoint(typeof(IService1), new WebHttpBinding(), "http://localhost:8000/Index");
+            Host.Description.Endpoints[0].Behaviors.Add(new WebHttpBehavior { HelpEnabled = true });
 
             Host.Open();
-           
-                
-                Console.WriteLine("Service: " + "http://localhost:8000"  +" Started"  );
-                Console.WriteLine("<Press Enter To Close Service>");
-                Console.ReadLine();
-                Host.Close();
+
+            Console.WriteLine("Service: " + "http://localhost:8000/index"  +" Started\n"  );
+            Console.WriteLine("View avaiable methods at " + "http://localhost:8000/index/help" +"\n");
+            Console.WriteLine("<Press Enter To Close Service>");
+            Console.ReadLine();
+            Host.Close();
 
 
 

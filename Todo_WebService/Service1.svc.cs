@@ -25,17 +25,6 @@ namespace Todo_WebService
             return d.GetToDoListByName(name);
         }
 
-        public void AddTodoList(List<ToDo> todolist)
-        {
-            foreach (ToDo todo in todolist)
-            {
-                if (todo.Name.Length >= 6)
-                {
-                    d.AddToDo(todo);
-                }
-            }
-        }
-
         public void MarkAsDone(string id)
         {
             int ID;
@@ -128,6 +117,17 @@ namespace Todo_WebService
             if (ID >= 0)
             { d.DeleteToDo(ID); }
             else ID = -1;            
+        }
+
+        public void AddTodoList(List<ToDo> todolist)
+        {
+            foreach (ToDo todo in todolist)
+            {
+                if (todo.Name.Length >= 6)
+                {
+                    d.AddToDo(todo);
+                }
+            }
         }
 
 

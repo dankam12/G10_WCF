@@ -25,6 +25,23 @@ namespace Todo_WebService
             return d.GetToDoListByName(name);
         }
 
+        public void AddTodo(ToDo todo)
+        {
+            if (todo.Name.Length >= 6)
+            {
+                d.AddToDo(todo);
+            }
+        }
+
+        public void DelTodo(string id)
+        {
+            int ID;
+            int.TryParse(id, out ID);
+            if (ID >= 0)
+            { d.DeleteToDo(ID); }
+            else ID = -1;
+        }
+
         public void MarkAsDone(string id)
         {
             int ID;
@@ -34,14 +51,6 @@ namespace Todo_WebService
                 ToDo todo = d.GetToDoById(ID);
                 todo.Finnished = true;
                 d.UpdateToDo(todo);
-            }
-        }
-
-        public void AddTodo(ToDo todo)
-        {
-            if (todo.Name.Length >= 6)
-            {
-                d.AddToDo(todo);
             }
         }
 
@@ -84,6 +93,17 @@ namespace Todo_WebService
             d.UpdateToDo(todo);
         }
 
+        public void AddTodoList(List<ToDo> todolist)
+        {
+            foreach (ToDo todo in todolist)
+            {
+                if (todo.Name.Length >= 6)
+                {
+                    d.AddToDo(todo);
+                }
+            }
+        }
+
         public String GetErrorMessage()
         {
             return d.GetErrorMessage();
@@ -109,27 +129,6 @@ namespace Todo_WebService
             return d.GetToDoList();
 
         }       
-
-        public void DelTodo(string id)
-        {
-            int ID;
-            int.TryParse(id, out ID);
-            if (ID >= 0)
-            { d.DeleteToDo(ID); }
-            else ID = -1;            
-        }
-
-        public void AddTodoList(List<ToDo> todolist)
-        {
-            foreach (ToDo todo in todolist)
-            {
-                if (todo.Name.Length >= 6)
-                {
-                    d.AddToDo(todo);
-                }
-            }
-        }
-
 
     }
     // till kolla om ! på slutet  if("köpaöl!".substring(("köpaöl!".length -1))== !) fixa whitespaces samt trim... 

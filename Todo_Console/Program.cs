@@ -16,23 +16,24 @@ namespace Todo_Console
         static void Main(string[] args)
         {
 
-            WebServiceHost Host = new WebServiceHost(typeof(Service1), new Uri("Localhost:8000/"));
-
-            ServiceEndpoint ep = Host.AddServiceEndpoint(typeof(IService1), new WebHttpBinding(), "http://localhost:8000/Index");
-            Host.Description.Endpoints[0].Behaviors.Add(new WebHttpBehavior { HelpEnabled = true });
-
-            Host.Open();
-
-            Console.WriteLine("Service: " + "http://localhost:8000/index"  +" Started\n"  );
-            Console.WriteLine("View avaiable methods at " + "http://localhost:8000/index/help" +"\n");
-            Console.WriteLine("<Press Enter To Close Service>");
-            Console.ReadLine();
-            Host.Close();
-
-
-
-
+            WebServiceHost host = new WebServiceHost(typeof(Service1), new Uri("Localhost:8000/"));
+            try
+            {
+                ServiceEndpoint ep = host.AddServiceEndpoint(typeof(IService1), new WebHttpBinding(), "http://localhost:8000/Index");
+                host.Description.Endpoints[0].Behaviors.Add(new WebHttpBehavior { HelpEnabled = true });
+                host.Open();
+                Console.WriteLine("Service: " + "http://localhost:8000/index" + " Started\n");
+                Console.WriteLine("View available methods at " + "http://localhost:8000/index/help" + "\n");
+                Console.WriteLine("<Press any key To Close Service>");
+                Console.ReadLine();
+                host.Close();
+            }
+            catch (CommunicationException cex)
+            {
+                Console.WriteLine("An exception occurred: {0}", cex.Message);
+                host.Abort();
             }
         }
     }
+}
 

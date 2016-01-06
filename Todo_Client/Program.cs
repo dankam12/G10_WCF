@@ -74,8 +74,6 @@ namespace Todo_Client
                 Console.WriteLine("Ops! {0}", e.ToString());
             }
         }
-
-
         static bool SetTodo(string description, int Id)
         {
             Console.WriteLine("About to update Todo {0} with {1}", Id.ToString(), description);
@@ -90,7 +88,6 @@ namespace Todo_Client
             }
             return true;
         }
-
         static void GetTodo(int Id = -1)
         {
             try
@@ -115,7 +112,6 @@ namespace Todo_Client
                 Console.WriteLine("Ops! {0}", e.ToString());
             }
         }
-
         static void ShowHelp()
         {
             Console.WriteLine("\n{0} - Testclient for Todo RESTful methods.", AppDomain.CurrentDomain.FriendlyName);
@@ -127,9 +123,6 @@ namespace Todo_Client
 
             Environment.Exit(0);
         }
-
-
-        
         static void GetTODo(int NR)
         {
             using (ChannelFactory<IService1> cf = new ChannelFactory<IService1>(new WebHttpBinding(), "http://localhost:8000/Index"))
@@ -179,7 +172,6 @@ namespace Todo_Client
 
 
             }
-
         static void GetToDoListByName(string Name)
         {
             using (ChannelFactory<IService1> cf = new ChannelFactory<IService1>(new WebHttpBinding(), "http://localhost:8000/Index"))

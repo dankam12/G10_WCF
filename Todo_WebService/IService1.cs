@@ -31,13 +31,13 @@ namespace Todo_WebService
         [OperationContract]
         [WebInvoke(UriTemplate = "/DeleteToDo/{id}", Method = "DELETE")]
         [Description("Implementerar Krav nr. 4 (Ta bort punkter)")]
-        void DelTodo(string id);
+        string DelTodo(string id);
 
         // Implementerar krav 4. Ta bort punkter (Markera en punkt som klar)
         [OperationContract]
         [WebInvoke(Method = "PUT", UriTemplate = "/MarkAsDone/{id}", RequestFormat = WebMessageFormat.Json)]
         [Description("Implementerar Krav nr. 4 (Ta bort punkter / Markera en punkt som klar)")]
-        void MarkAsDone(string id);
+        string MarkAsDone(string id);
 
         // Implementerar krav 5. Se antal punkter i listan
         [OperationContract]
@@ -61,13 +61,14 @@ namespace Todo_WebService
         [OperationContract]
         [WebInvoke(Method = "PUT", UriTemplate = "/UpDateToDo", RequestFormat = WebMessageFormat.Json)]
         [Description("Implementerar Krav nr. 8 (Redigera punkter)")]
-        void UpdateTodo(ToDo todo);
-
-        /* Vi hittade ingen anledning att exponera dessa endpoints
+        string UpdateTodo(ToDo todo);
 
         [OperationContract]
-        [WebGet(UriTemplate = "GetTodo/", ResponseFormat = WebMessageFormat.Json)]
+        [WebGet(UriTemplate = "/GetTodo", ResponseFormat = WebMessageFormat.Json)]
+        [Description("För TEST, returnerar hela DB")]
         List<ToDo> GetToDoList();
+
+        /* Vi hittade ingen anledning att exponera dessa endpoints
 
         [OperationContract]
         [WebGet(UriTemplate = "/GetToDoById/{id}",ResponseFormat = WebMessageFormat.Json)]
@@ -79,22 +80,5 @@ namespace Todo_WebService
 
         */
 
-        
-
-        
-
-
-        
-
-        
-
-
-
-
-
     }
-
-
-  
-
 }

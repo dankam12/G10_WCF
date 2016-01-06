@@ -11,11 +11,7 @@ using Todo_DB;
 
 
 namespace Todo_WebService
-{
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in code, svc and config file together.
-    // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
-    //PS C:\WINDOWS\system32> Invoke-RestMethod -Uri http://localhost:8000/index/GEtTodo/3 -UseDefaultCredentials -Method DELETE
-    
+{    
     public class Service1 : IService1
     {
         private DAL d = new DAL (@"Data Source=localhost\sqlexpress;Initial Catalog=DB_ToDoList;User ID=RestFullUser;Password=RestFull123");
@@ -36,25 +32,41 @@ namespace Todo_WebService
                 return "Name too short";
         }
 
-        public void DelTodo(string id)
+        public string DelTodo(string id)
         {
             int ID;
             int.TryParse(id, out ID);
-            if (ID >= 0)
-            { d.DeleteToDo(ID); }
-            else ID = -1;
+            ToDo todo = d.GetToDoById(ID);
+            if (todo != null && ID >= 0)
+            {
+                d.DeleteToDo(ID);
+                return "ToDo with id " + ID + " was deleted";
+            }
+            else
+            {
+                return "ToDo with id " + ID + " wasn't found in DB";
+            }
         }
 
-        public void MarkAsDone(string id)
+        public string MarkAsDone(string id)
         {
             int ID;
             int.TryParse(id, out ID);
             if (ID >= 1)
             {
                 ToDo todo = d.GetToDoById(ID);
-                todo.Finnished = true;
-                d.UpdateToDo(todo);
+                if (todo != null && todo.Finnished == false)
+                {
+                    todo.Finnished = true;
+                    d.UpdateToDo(todo);
+                    return "ToDo with id " + id + " has been marked as Finished";
+                }
+                else
+                {
+                    return "ToDo with id " + id + " doesn't exsist in DB or is already marked as Finished";
+                }
             }
+            return "Id not valid!";
         }
 
         public string GetToDoStatus(string name)
@@ -90,10 +102,18 @@ namespace Todo_WebService
             return completed;
         }
 
-        public void UpdateTodo(ToDo todo)
+        public string UpdateTodo(ToDo todo)
         {
-
-            d.UpdateToDo(todo);
+            ToDo to = d.GetToDoById(todo.Id);
+            if (to != null && to.Name.Length >= 6)
+            {
+                d.UpdateToDo(todo);
+                return "ToDo with id " + todo.Id + " has been updated";
+            }
+            else
+            {
+                return "A ToDo with id " + todo.Id + " wasn't found in DB or formated incorrectly";
+            }
         }
 
         public string AddTodoList(List<ToDo> todolist)
@@ -147,5 +167,4 @@ namespace Todo_WebService
         }       
 
     }
-    // till kolla om ! på slutet  if("köpaöl!".substring(("köpaöl!".length -1))== !) fixa whitespaces samt trim... 
 }

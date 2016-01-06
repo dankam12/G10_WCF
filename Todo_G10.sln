@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo_DB", "Todo_DB\Todo_DB.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo_Host", "Todo_Console\Todo_Host.csproj", "{640015C2-6212-48DF-9361-CC208E181591}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo_Client", "Todo_Client\Todo_Client.csproj", "{489412A9-CA03-4568-84E7-14C7892E055C}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,10 +33,6 @@ Global
 		{640015C2-6212-48DF-9361-CC208E181591}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{640015C2-6212-48DF-9361-CC208E181591}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{640015C2-6212-48DF-9361-CC208E181591}.Release|Any CPU.Build.0 = Release|Any CPU
-		{489412A9-CA03-4568-84E7-14C7892E055C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{489412A9-CA03-4568-84E7-14C7892E055C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{489412A9-CA03-4568-84E7-14C7892E055C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{489412A9-CA03-4568-84E7-14C7892E055C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

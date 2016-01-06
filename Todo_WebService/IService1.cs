@@ -63,6 +63,7 @@ namespace Todo_WebService
         [Description("Implementerar Krav nr. 8 (Redigera punkter)")]
         string UpdateTodo(ToDo todo);
 
+        // Returnerar innehållet i hela databasen, används för test
         [OperationContract]
         [WebGet(UriTemplate = "/GetTodo", ResponseFormat = WebMessageFormat.Json)]
         [Description("För TEST, returnerar hela DB")]
